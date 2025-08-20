@@ -1,0 +1,22 @@
+body {
+    background-color: #bef4f4;
+    padding: 5px;
+}
+
+.mainContainer {
+    background-color: #95f7f7;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: 3px solid #87f3f3;
+    border-radius: 5px;
+}
+
+.mainContainer ul {
+    margin-bottom: 0;
+}
+
+a, a:visited {
+    color: #e03322;
+}
