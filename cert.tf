@@ -25,10 +25,10 @@ resource "cloudflare_dns_record" "acm_validation" {
   }
 
   zone_id = data.cloudflare_zone.main.zone_id
-  name    = each.value.name
-  type    = each.value.type
+  name = each.value.name
+  type = each.value.type
   content = each.value.value
-  ttl     = 60
+  ttl = 60
   proxied = false
 }
 
