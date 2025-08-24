@@ -51,8 +51,8 @@ locals {
     woff2 = "font/woff2"
   }
 
-  site_files = fileset("${path.module}/site", "**")
-  site_hash = sha1(join(",", [for f in local.site_files : filemd5("${path.module}/site/${f}")]))
+  site_files = fileset("${path.module}/dist", "**")
+  site_hash = sha1(join(",", [for f in local.site_files : filemd5("${path.module}/dist/${f}")]))
 }
 
 resource "aws_s3_object" "site_files" {
@@ -60,8 +60,8 @@ resource "aws_s3_object" "site_files" {
 
   bucket = aws_s3_bucket.site.id
   key = each.value
-  source = "${path.module}/site/${each.value}"
-  etag = filemd5("${path.module}/site/${each.value}")
+  source = "${path.module}/dist/${each.value}"
+  etag = filemd5("${path.module}/dist/${each.value}")
   
   content_type = lookup(
     local.mime,
