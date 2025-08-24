@@ -1,0 +1,12 @@
+{
+  "name": "pointotech-dot-com",
+  "version": "1.0.0",
+  "description": "Pointotech web site",
+  "main": "build.mjs",
+  "repository": "git@github.com:Pointotech/pointotech-dot-com.git",
+  "private": true,
+  "devDependencies": {
+    "esbuild": "^0.25.9",
+    "jsdom": "^26.1.0"
+  }
+}
